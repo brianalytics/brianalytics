@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Brionna Eslamiamirabadi
 - 👀 I’m interested in Data Engineering, Data Science, Analytics, Coding, and Visualization
-- 🌱 I’m currently learning AI and Data Analytics in a fellowship program
+- 🌱 I’m currently learning AI and Data Analytics in a fellowship program, and self studying along the way
 - 💞️ I’m looking to collaborate on data science projects regarding healthcare and minority populations
 - 📫 You can reach me via email at brionnajordan@gmail.com
 
