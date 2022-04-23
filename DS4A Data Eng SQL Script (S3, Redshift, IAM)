@@ -1,0 +1,72 @@
+DS4A Data Eng SQL Script (S3, Redshift, IAM)
+
+ -- under dev schema, just in case one already exists, should return an error
+--DROP SCHEMA tutorial;
+--
+--CREATE SCHEMA tutorial;
+--
+-- drop any previous table instances if you've already created the schema before
+--DROP TABLE IF EXISTS dev.tutorial.wiki_movies;
+--
+--creating the wiki movies table in the tutorial schema with the appropriate columns
+--CREATE TABLE tutorial.wiki_movies (
+--movie_id bigint IDENTITY(1,1),
+--  title varchar(100) NOT NULL,
+--  year integer NOT NULL, 
+--  "cast" varchar(5000),
+--  genres varchar(5000)
+--);
+------------LOAD----------
+--loading the data into the wiki movies table from the s3 buckets
+--COPY tutorial.wiki_movies (title, year, "cast", genres)
+--FROM 'S3 Bucket Link'
+--REGION 'us-east-1'
+--IAM_ROLE 'IAM ARN Link'
+--FORMAT JSON 'auto'; --formatting based on the source type
+
+--checking to see if we added to data successfully
+--SELECT *
+--FROM tutorial.wiki_movies
+--LIMIT 10;
+--------TRANSFORMATION--------
+--checking cast values to see how unique they are
+--SELECT DISTINCT "cast"
+--FROM tutorial.wiki_movies;
+
+--changing the 'cast' column to be cast_names to reduce confusion bc cast is a reserved word in sql
+--ALTER TABLE tutorial.wiki_movies
+--RENAME COLUMN "cast" TO cast_names;
+
+--bc cast_names are an array-type list of names with quotes, we want to clean it up and remove unwanted characters by creating a user-defined function
+--CREATE OR REPLACE FUNCTION f_clean_cast(varchar)
+--RETURNS varchar
+--STABLE AS $$
+--	SELECT REPLACE(TRIM(']' FROM TRIM('[' FROM $1)), '"','')
+--    $$ language sql;
+
+--adding a column called cast_list where we will store our transformed data (aka the cleaned version of the cast_names column)
+--ALTER TABLE tutorial.wiki_movies ADD COLUMN cast_list varchar;
+--
+--set the new cast_list column equal to the function we created above, which adds the cast_name data to the cast_list column, this should throw an error bc of the varchar size of the cast_list
+--UPDATE tutorial.wiki_movies
+--SET cast_list = f_clean_cast(cast_names);
+--
+--bc of the error, we're going to change the size of the varchar to 1000 for the cast_list
+--ALTER TABLE tutorial.wiki_movies
+--ALTER COLUMN cast_list TYPE varchar(1000);
+--
+--now we are able to set the cast_list equals to the user defined function, which removes the brackets and quotation marks
+--UPDATE tutorial.wiki_movies
+--    SET cast_list = f_clean_cast(cast_names);
+
+--we can check out results now
+--SELECT cast_names, cast_list
+--FROM tutorial.wiki_movies
+--LIMIT 10;
+
+--bc we have a transformed colum, we can now drop the column that is dirty/unformatted
+--ALTER TABLE tutorial.wiki_movies DROP COLUMN cast_names;
+
+--now we can check all of our results
+SELECT * FROM tutorial.wiki_movies
+LIMIT 10;
