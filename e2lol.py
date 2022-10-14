@@ -1,4 +1,18 @@
 
+#updated version
+import json, requests
+url = ('https://raw.githubusercontent.com/normansimonr/Dumb-Cogs/master/lolz/data/tranzlashun.json')
+resp = requests.get(url)
+data = json.loads(resp.text)
+
+with open('english.txt', 'r') as input_file:
+    with open('lolcat.txt', 'w') as output_file:
+        for line in input_file:
+            for word in line.split():
+                output_file.write(data.get(word.lower(), word.lower()))
+                output_file.write(' ')
+            output_file.write('\n')
+
 # coding: utf-8
 
 # In[1]:
