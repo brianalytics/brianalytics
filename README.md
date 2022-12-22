@@ -8,7 +8,7 @@ Previously: Data Engineering Fellow
 
 Background: Criminal Justice, Criminal Justice Data, Public Records Management
 
-Stack/Tools: Python (PySpark/Pandas/BeautifulSoup/NumPy/MatPlotLib/Plotly), SQL, HTML, CSS, AWS (Redshift/S3/RDS/EC2), Snowflake, Postgres, MySQL, MSSQL, VSCode, Deepnote/Jupyter, dbt, Tableau, Docker, Prefect
+Stack/Tools/Triage: Python (PySpark/Pandas/BeautifulSoup/NumPy/MatPlotLib/Plotly), SQL, HTML, CSS, AWS (Redshift/S3/RDS/EC2), Snowflake, Postgres, MySQL, MSSQL, VSCode, Deepnote/Jupyter, dbt, Tableau, Docker, Prefect, Google Search Console, Google Analytics, SemRush, Salesforce, Zendesk, Jira, Confluence, Notion, Google Suite
 
 Certs: AWS CCP, CompTIA Data+, NVIDIA DLI Accelerating Data Engineering Pipelines, Data Science for All Fellowship, Data Engineering Fellowship - Honors
 
