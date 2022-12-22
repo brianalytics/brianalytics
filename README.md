@@ -2,13 +2,15 @@
 
 Name: Brionna "Bri"
 
-Currently: Data Engineering Fellow & Data Quality Specialist
+Currently: Data Quality Specialist with a focus on Python Automation, Ingestion, and Enrichment
+
+Previously: Data Engineering Fellow
 
 Background: Criminal Justice, Criminal Justice Data, Public Records Management
 
-Stack/Tools: Python (PySpark/Pandas/BeautifulSoup/NumPy/MatPlotLib/Plotly), SQL, HTML, AWS (Redshift/S3/RDS/EC2), Snowflake, Postgres, MySQL, MSSQL, VSCode, Deepnote/Jupyter, dbt, Tableau, Docker, Prefect
+Stack/Tools: Python (PySpark/Pandas/BeautifulSoup/NumPy/MatPlotLib/Plotly), SQL, HTML, CSS, AWS (Redshift/S3/RDS/EC2), Snowflake, Postgres, MySQL, MSSQL, VSCode, Deepnote/Jupyter, dbt, Tableau, Docker, Prefect
 
-Certs: AWS CCP, CompTIA Data+, NVIDIA DLI Accelerating Data Engineering Pipelines, Data Science for All Fellowship
+Certs: AWS CCP, CompTIA Data+, NVIDIA DLI Accelerating Data Engineering Pipelines, Data Science for All Fellowship, Data Engineering Fellowship - Honors
 
 <!---
 brianalytics/brianalytics is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
