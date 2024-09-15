@@ -2,13 +2,13 @@
 
 Name: Brionna "Bri"
 
-Currently: Data Quality Specialist with a focus on Python Automation, Ingestion, and Enrichment
+Currently: Data Engineer with a focus on PySpark and TypeScript Data Pipelines
 
-Previously: Data Engineering Fellow
+Previously: Data Quality & Automation Specialist
 
-Background: Criminal Justice, Criminal Justice Data, Public Records Management
+Background: Data Engineering, Data Quality, Criminal Justice, Criminal Justice Data, Public Records Management
 
-Stack/Tools/Triage: Python (PySpark/Pandas/BeautifulSoup/NumPy/MatPlotLib/Plotly), SQL, HTML, CSS, AWS (Redshift/S3/RDS/EC2), GCP (IAM/APIs), Snowflake, Postgres, MySQL, MSSQL, VSCode, Deepnote/Jupyter, dbt, Tableau, Docker, Prefect, Google Search Console, Google Analytics, SemRush, Salesforce, Zendesk, Jira, Confluence, Notion, Google Suite
+Stack/Tools/Triage: Python (PySpark/Pandas/BeautifulSoup/NumPy/MatPlotLib/Plotly), SQL, HTML, CSS, AWS (Redshift/S3/RDS/EC2), GCP (IAM/APIs), Snowflake, Postgres, MySQL, MSSQL, VSCode, Deepnote/Jupyter, dbt, Tableau, Docker, Prefect, Google Search Console, Google Analytics, SemRush, Salesforce, Zendesk, Jira, Confluence, Notion, Google Suite, Palantir Foundry
 
 Certs: AWS CCP, CompTIA Data+, NVIDIA DLI Accelerating Data Engineering Pipelines, Data Science for All Fellowship, Data Engineering Fellowship - Honors
 
